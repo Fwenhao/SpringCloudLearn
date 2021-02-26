@@ -1,0 +1,16 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: nacos-payment-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://localhost:8848
+
+# 暴露要监控的东西
+management:
+  auditevents:
+    web:
+      exposure:
+        include: '*'
